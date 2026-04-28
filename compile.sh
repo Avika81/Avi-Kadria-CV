@@ -4,7 +4,7 @@ xelatex resume.tex
 # sudo apt install texlive-bibtex-extra biber texlive-fontsextra
 
 # clean stuff:
-# rm -f *.bcf *.aux *.log *.run.xml
+# rm -f *.bcf *.aux *.log *.run.xml *.bbl *.blg
 
 # regenerate bibfile:
 # biber resume
