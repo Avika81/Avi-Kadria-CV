@@ -1,4 +1,4 @@
-xelatex resume.tex
+latexmk -xelatex resume.tex && cp resume.pdf Avi_Kadria_CV.pdf
 
 # reqs:
 # sudo apt install texlive-bibtex-extra biber texlive-fontsextra

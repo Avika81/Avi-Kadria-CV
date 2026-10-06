@@ -4,7 +4,7 @@
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{russell}
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.2cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -28,6 +28,9 @@
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% Tighter spacing between sections, to fit the CV on one page
+\renewcommand{\acvSectionTopSkip}{1.5mm}
 
 
 %-------------------------------------------------------------------------------
@@ -88,6 +91,8 @@
 \input{cv/summary.tex}
 \input{cv/education/education}
 \input{cv/education/publications_only_papers}
+\input{cv/education/awards}
+\newpage
 \input{cv/work/military}
 \input{cv/work/pre_military}
 % experience.tex}
