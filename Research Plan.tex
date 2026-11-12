@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{newpxtext,newpxmath}
-\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[protrusion=true]{microtype}
 \linespread{1.02}
 
 % ---------- Page layout ----------
@@ -48,11 +48,13 @@ My research combines graph algorithms and fine-grained complexity, with a focus 
 
 \section{1. Faster Algorithms for Distance Problems}
 
-My recent results improve several state-of-the-art bounds. With Roditty, I gave the first improvement on the construction time of the Thorup--Zwick distance oracles for graphs that are not super sparse, including the first subquadratic construction for $2<k<6$, which resolves an open problem of Wulff-Nilsen [ICALP'26]. We also gave the first improvement for single-source shortest paths (SSSP) in weighted undirected graphs since the breakthrough of Duan, Mao, Shu, and Yin [FOCS'23] (arXiv'26). For $n$-Pairs Shortest Paths, we introduced the \emph{heavy-edge} technique and obtained a $1.622k$-approximation in weighted graphs, answering an open question of Chechik, Hoch, and Lifshitz [ESA'26]. I plan to continue in three directions:
+My recent results improve several state-of-the-art bounds. With Roditty, I gave the first improvement on the construction time of the Thorup--Zwick distance oracles for graphs that are not sparse, including the first subquadratic construction for $2<k<6$, which resolves an open problem of Wulff-Nilsen [ICALP'26]. We also gave the first improvement for single-source shortest paths (SSSP) in weighted undirected graphs [SOFSEM'27] since the breakthrough of Duan, Mao, Shu, and Yin [FOCS'23]. For $n$-Pairs Shortest Paths, we introduced the \emph{heavy-edge} technique and obtained a $1.622k$-approximation in weighted graphs, answering an open question of Chechik, Hoch, and Lifshitz [ESA'26]. I plan to continue in four directions:
 \begin{itemize}
-  \item \textbf{Distance oracles.} How fast can $(2k-1)$-stretch oracles be constructed? Wulff-Nilsen asked for near-linear constructions; we extended the range of densities where they are possible. I aim to close the remaining gap, building on our hierarchy of parameterized oracles.
+  \item \textbf{Distance oracles.} How fast can $(2k-1)$-stretch oracles be constructed? Wulff-Nilsen asked for near-linear constructions; we extended the range of densities where they are possible. 
+  I aim to close the remaining gap by refining the sampling and exploration techniques underlying our parameterized oracle hierarchy.
   \item \textbf{Shortest paths.} Our SSSP algorithm shows that the $O(m\sqrt{\log n\log\log n})$ bound is not the limit. I aim to determine the true complexity of SSSP in the comparison-addition model, and whether our improvement extends to directed graphs, where Duan et al.\ [ICALP'26] recently matched the undirected bound.
   \item \textbf{Derandomization.} Most fast distance algorithms rely on random sampling. My deterministic girth algorithm (arXiv'26) matches the randomized bounds through a new way to truncate the Thorup--Zwick hierarchy. I plan to apply this idea to distance oracles, spanners, and $n$-Pairs Shortest Paths.
+  \item \textbf{Geometry and graph structure.} I plan to use geometric techniques to design faster distance algorithms for structured graph classes. In ongoing work on weighted directed planar graphs, we reduce $(1+\varepsilon)$-approximate diameter to orthogonal range queries and obtain near-linear time.
 \end{itemize}
 
 \section{2. Lower Bounds and Structural Barriers}
@@ -61,7 +63,6 @@ For sparse graphs, the classical space lower bound for distance oracles gives no
 \begin{itemize}
   \item \textbf{Go beyond restricted models.} Extend space lower bounds from pivot-based oracles toward general oracles for sparse graphs, a central open question in the area.
   \item \textbf{Prove conditional lower bounds.} Use 3SUM, APSP, and related hypotheses to prove lower bounds for girth, shortest cycles, and $n$-Pairs Shortest Paths, and determine how the hardness depends on graph density and approximation factor.
-  \item \textbf{Use geometry.} Computational geometry is both a source of hardness constructions and a tool for algorithms. In ongoing work on weighted directed planar graphs, we reduce $(1+\varepsilon)$-approximate diameter to orthogonal range queries and obtain near-linear time.
 \end{itemize}
 
 \section{3. Long-Term Vision}
